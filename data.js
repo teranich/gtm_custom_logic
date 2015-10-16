@@ -1,6 +1,8 @@
 var bee = bee || {};
-bee.data = [{
-    trigger: '.dynamic.show-all em',
+bee.data = bee.data || [{}]; 
+bee.data.push({
+  eventTrigger: ".dynamic.show-all em", //
+  contentSelector: null, // 
     //valuable: 'em', //required
     //payload: 'span',
     ctrl: {
@@ -23,6 +25,6 @@ bee.data = [{
     },
     //payload: 'span',
     cut: [0, 11],
-}];
+});
 
 //console.log('win bee2', window.bee2);
