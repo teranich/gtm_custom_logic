@@ -1,9 +1,9 @@
 var bee = bee || {};
 bee.data = bee.data || [{}]; 
 bee.data.push({
-  eventTrigger: ".dynamic.show-all em", // Required. Элемент, на который устанавливается событие
-  contentSelector: null, // Если null, то берется значения из активного eventTrigger, нужно также передавать скрипты
-  eventdata: {
+  trigger: ".dynamic.show-all em", // Required. Элемент, на который устанавливается событие
+  content: null, // Если null, то берется значения из активного trigger, нужно также передавать скрипты
+  data: {
     eventname: null // Если null, берется дефолтное значение
     category: "commonClick", // Required. Категория события, также является именем контроллера
     action: null, // Если null, определяетя алгоритмом контроллера
