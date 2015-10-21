@@ -1,28 +1,26 @@
 var bee = bee || {};
-bee.data = [{
-    trigger: '.dynamic.show-all em',
-    //valuable: 'em', //required
-    //payload: 'span',
-    ctrl: {
-        action: 'Click',
-        category: 'cantegoryName',
-        context: 'ContextName'
+bee.data = bee.data || [];
+bee.data.push({
+  trigger: ".form-inline .submit .CalculateButton span.disabled", // Required. Элемент, на который устанавливается событие
+  content: null, // Если null, то берется значения из активного trigger, нужно также передавать скрипты
+  data: {
+    eventname: null,// Если null, берется дефолтное значение
+    category: "commonClick", // Required. Категория события, также является именем контроллера
+    action: null, // Если null, определяетя алгоритмом контроллера
+    label: null, // Если null, берется дефолтное значение
+    context: null // Если null, определяетя алгоритмом контроллера
+  },
+  cut: {
+    text: { // Переменная, для которой необходимо обрезание текста
+      start: null, // Если null, то 0
+      end: 11 // Если null, то до конца строки
     },
-    cut: [0, 11],
-    replace: {
-        regexp: /hon/i,
-        to: 'blablabla'
+    action: {
+      end: 16  
+      }
     },
-},{
-    trigger: '#Services1 h4:eq(0) .dynamic',
-    //valuable: '#catalogHeader', //required
-    ctrl: {
-        action: 'Click',
-        category: 'cantegoryName',
-        context: 'ContextName'
-    },
-    //payload: 'span',
-    cut: [0, 11],
-}];
-
-//console.log('win bee2', window.bee2);
+  replace: {
+    regexp: /hon/i,
+    to: 'blablabla'
+  },
+});
