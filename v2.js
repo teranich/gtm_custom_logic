@@ -40,7 +40,7 @@ window.bee = window.bee || {};
     };
 
     getContent.prototype.cut = function(params) {
-        if (this.planeText != undefined && params && params.length !== undefined) {
+        if (this.planeText != undefined && params) {
             var text = this.planeText;
             this.planeText = text.substring(params.start, params.end);
         }
